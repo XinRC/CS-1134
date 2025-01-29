@@ -23,5 +23,6 @@ lst_iterator = iter(lst)
 
 print(next(lst_iterator)) # will print 1
 print(next(lst_iterator)) # will print 2
+print(next(lst_iterator)) # will result in a StopIteration Error
 ```
-However, do note that if the iterator has already been cycled through, the next attempt at `next()` will result in a StopIteration Error
+However, do note that if the iterator has already been cycled through, the next attempt at `next()` will result in a StopIteration Error (as shown above)
