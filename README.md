@@ -5,6 +5,6 @@
 
 </div>
 
-The materials goes over:
+The materials go over:
 
 - (LEC 3) Iterators / Generators
