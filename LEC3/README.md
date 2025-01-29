@@ -26,3 +26,7 @@ print(next(lst_iterator)) # will print 2
 print(next(lst_iterator)) # will result in a StopIteration Error
 ```
 However, do note that if the iterator has already been cycled through, the next attempt at `next()` will result in a StopIteration Error (as shown above)
+
+
+## Generators:
+While iterators utilize a lot more resources and all the iterations are calculated prior to their utilization, generators use up less resources since it provides the data as it is being requested. Meaning if a certain data was never requested, it will never ask for it. An important keyword for generators is `yield` as it is used similarly to that of "return" except it will go back to the yield call if the program was to be called again. 
