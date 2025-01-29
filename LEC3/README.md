@@ -12,6 +12,15 @@ When working with Iterators/Generators, a few things need to be kept in mind:
 
 By using the following code, the programmer will be able to assign the list as an iterator:
 ```python
-lst = [1, 2, 3, 4]
+lst = [1, 2]
 lst_iterator = iter(lst)
+```
+
+To iterate through to the next integer, the command `next()` should be used.
+```python
+lst = [1, 2]
+lst_iterator = iter(lst)
+
+print(next(lst_iterator)) # will print 1
+print(next(lst_iterator)) # will print 2
 ```
