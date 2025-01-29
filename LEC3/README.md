@@ -33,12 +33,18 @@ While iterators utilize a lot more resources and all the iterations are calculat
 
 ```python
 def generator():
-num = 1
-yield num # will return 1
+  num = 1
+  yield num # will return 1
 
-num += 1
-yield num #will return 2 if next() was called again
+  num += 1
+  yield num #will return 2 if next() was called again
 
-num += 1
-yield num #will return 3 if next() was called again
+  num += 1
+  yield num #will return 3 if next() was called again
+
+def main():
+  print(generator())
+
+if __name__ == "__main__":
+  main()
 ```
