@@ -43,7 +43,8 @@ def generator():
   yield num #will return 3 if next() was called again
 
 def main():
-  print(generator())
+  print(next(generator())) # prints out 1
+  print(next(generator())) # pirnts out 2
 
 if __name__ == "__main__":
   main()
