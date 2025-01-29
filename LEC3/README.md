@@ -1,2 +1,3 @@
-#Lecture 3
-##Iteration and Generators 
+# Lecture 3
+## Iteration and Generators 
+---
