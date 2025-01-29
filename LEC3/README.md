@@ -1,3 +1,6 @@
+<Center>
 # Lecture 3
-## Iteration and Generators 
----
+</Center>
+
+## Iterators:
+Iterators are 
