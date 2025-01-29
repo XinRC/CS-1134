@@ -5,7 +5,7 @@
 </div>
 
 ## Iterators:
-When working with Iterators/Generators, a few things need to be kept in mind:
+When working with iterators/generators, a few things need to be kept in mind:
 >Iterable: An item that is able to be become an iterator. This includes lists and strings.
 
 >Iterator: The object that will be iterated through. 
@@ -24,3 +24,4 @@ lst_iterator = iter(lst)
 print(next(lst_iterator)) # will print 1
 print(next(lst_iterator)) # will print 2
 ```
+However, do note that if the iterator has already been cycled through, the next attempt at `next()` will result in a StopIteration Error
