@@ -1,6 +1,8 @@
-<Center>
+<div align = "center">
+  
 # Lecture 3
-</Center>
+
+</div>
 
 ## Iterators:
 Iterators are 
