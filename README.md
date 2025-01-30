@@ -5,6 +5,6 @@
 
 </div>
 
-The repository includes notes from CS-UY 1134 lectures. 
+The repository includes notes from **CS-UY 1134** lectures. 
 
 - Lecture 3 |: Iterators / Generators
