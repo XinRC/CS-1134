@@ -7,4 +7,4 @@
 
 The repository includes notes from **CS-UY 1134** lectures. 
 
-- Lecture 3 |: Iterators / Generators
+- [Lecture 3](https://github.com/XinRC/CS-1134/tree/main/lecture3) |: Iterators / Generators
