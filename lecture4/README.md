@@ -68,5 +68,9 @@ Runtime is very important in Computer Science. To figure out the runtime for the
 For T(n), where T(n) stands for runtime. T represents speed while (n) 
 ```
 Thus in asymptotic analysis, usually it will:
-1. Drop the lower order terms
+1. Drop the lowest order terms
 2. Ignore leading constants of highest order
+
+Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is.
+
+
