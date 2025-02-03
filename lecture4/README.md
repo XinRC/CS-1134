@@ -10,9 +10,12 @@
 
 Such algorithms must have a **legal** input and provide a defined output.
 
+
+
  ### For the algorithm to work, it must do two things:
 - It can terminate
 - It produces the correct output
+
 
 
 ## Given an example:
