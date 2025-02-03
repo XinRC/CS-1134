@@ -48,4 +48,22 @@ def fb_is_prime(n):
 
 - Square Root Version:
 
-This will result in: *1, 2, 3, ... √n, ... n/2 ... , n*
+This will result in: *1, 2, 3, ... √n, ... n/2 ... , n* This cuts the dataset (numbers) in half from √n. 
+
+```python
+def square_root_prime(n):
+ div_count = 0
+ for curr in range(1, sqrt(n) + 1):
+  if num % curr == 0:
+   div_count += 1
+ return div_count
+```
+
+Overall, all the functions above are ways to **optimze** the program. 
+
+## Runtime:
+Runtime is very important in Computer Science. To figure out the runtime for the program, a function is used to determine its runtime. 
+
+```python
+For T(n), where T(n) stands for runtime. T represents speed while (n) 
+```
