@@ -1,5 +1,7 @@
-<div alight = "center">
+<div align = "center">
 
 # Lecture 4
 
 </div>
+
+
