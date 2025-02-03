@@ -15,7 +15,6 @@ Such algorithms must have a **legal** input and provide a defined output.
 - It can terminate
 - It produces the correct output
 </br>
-</br>
 
 ## Given an example:
 To create an algorithm that will determine whether a number is a prime number. There are multiple ways of checking if the number is: 
