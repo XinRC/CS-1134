@@ -67,3 +67,6 @@ Runtime is very important in Computer Science. To figure out the runtime for the
 ```python
 For T(n), where T(n) stands for runtime. T represents speed while (n) 
 ```
+Thus in asymptotic analysis, usually it will:
+1. Drop the lower order terms
+2. Ignore leading constants of highest order
