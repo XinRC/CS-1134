@@ -97,7 +97,9 @@ Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better
 > θ -> how the runtime grows as `n` approaches infinity **at an exact rate**
 
 Usually we only care about the upper-bound since it is the worse case scenario.
+
 ---
+
 ### BIG - O Analysis:
 
 f(n) = runtime of the algorithm (how many steps as `n` grows)
