@@ -4,7 +4,7 @@
 
 </div>
 
-## Asymptotic Analysis:
+## Asymptotic Analysis Prologue:
 
 > Algorithms: A well defined computation procedure that describes how to transfer any given input to its desired output.
 
@@ -88,9 +88,11 @@ So the previous code will run at 2n + 2 because there are two items in the for l
 Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is. Another way to determine how optimized the algorithm is by look at its function. For example, T(1) is more optimized than T(n^2) since n^2 is a quadriatic. 
 
 ---
+<div align = "center">
+ 
+## Asymptotic Analysis:
 
-## Asymptotic Analysis OFFICAL:
-
+</div>
 > θ -> how the runtime grows as `n` approaches infinity **at an exact rate**
 
 > O -> also represents the upperbound *(worse-case scenario)* as `n` approaches infinity.
