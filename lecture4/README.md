@@ -83,12 +83,6 @@ def count(n):
 ```
 So the previous code will run at 2n + 2 because there are two items in the for loop, then we must multiply the items by `n`, then combine the +1s from outside the for loop. However, because we do not care about coefficients or digits outside of `n`, we will ignore those. Thus, T(θ) = n
 
-
+</br>
 
 Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is.
-
-
-
-
-
-T(theta) = n
