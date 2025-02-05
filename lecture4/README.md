@@ -117,4 +117,25 @@ if `f(n) = 3n^2 + 6n - 15,` if we want to prove that the upperbound of the funct
 
 Given that `n = 5` (randomly seleted), plug 5 into all of `n`, which will give us: `90 <= 100`
 
-Because the above relation is true, 
+Because the above relation is true, when graphing the relation on a graph, we are able to prove that c*g(n) is the upperbound of f(n).
+
+---
+
+> Ω -> This is how fast the algorithm is **guaranteed** to grow. ("best-case scenario").
+
+Similar proof, except instead of finding the upperbound, we are finding the lowerbound.
+
+f(n) -> runtime as `n` approaches infinity
+g(n) -> some function used as the **lowerbound** of f(n)
+
+Thus `f(n) = Ωg(n)`
+
+- There will also be a constant `c` where `f(n) >= c*g(n)`
+
+**EXAMPLE**
+f(n) = 3n^2 + 6n - 15
+g(n) = c * n^2
+
+- The constant should be less than (or equal to) the coefficient of the greatest degree. In this case, `c = 2`. Thus we get:
+
+  `3n^2 + 6n -15 >= 2n^2` plugging in `n = 5` (given that n = 5) will give us `90 >= 50`.
