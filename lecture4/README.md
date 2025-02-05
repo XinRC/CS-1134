@@ -85,4 +85,6 @@ So the previous code will run at 2n + 2 because there are two items in the for l
 
 </br>
 
-Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is.
+Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is. Another way to determine how optimized the algorithm is by look at its function. For example, T(1) is more optimized than T(n^2) since n^2 is a quadriatic. 
+
+---
