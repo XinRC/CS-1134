@@ -71,6 +71,24 @@ Thus in asymptotic analysis, usually it will:
 1. Drop the lowest order terms
 2. Ignore leading constants of highest order
 
+For example, for ever `x = 5` or similar code, you can add `+1`. However, for `loops`, you must represent the loop as `n` and multiply it by those inside the loop. For example:
+
+```python
+def count(n):
+ x = 0 # +1 runtime
+ for i in range(1, n+1): # * n 
+  if i % 2 == 0: # +1 runtime
+   x += 1 # +1 runtime
+ return x # +1 runtime
+```
+So the previous code will run at 2n + 2 because there are two items in the for loop, then we must multiply the items by `n`, then combine the +1s from outside the for loop. However, because we do not care about coefficients or digits outside of `n`, we will ignore those. Thus, T(\(\theta \)) = n
+
+
+
 Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is.
 
 
+
+
+
+T(theta) = n
