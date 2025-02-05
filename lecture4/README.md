@@ -110,7 +110,7 @@ g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n^2
 
 Thus: `f(n)` = O(g(n))
 
-This is because `f(n)` <= c * g(n), where c is a constant, n_o = the point where n is "really really big"
+This is because `f(n)` <= c * g(n), where c is a constant, n = the point where n is "really really big"
 
 
 **EXAMPLE**
