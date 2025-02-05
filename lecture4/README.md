@@ -93,9 +93,26 @@ Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better
 
 > θ -> how the runtime grows as `n` approaches infinity **at an exact rate**
 
-Usually, we only care about the *worse-case scenario*, aka the UPPERBOUND. 
-
 > O -> also represents the upperbound *(worse-case scenario)* as `n` approaches infinity.
+
+Usually, we only care about the *worse-case scenario*, aka the UPPERBOUND. 
 
 
 ### Big-O Analysis:
+
+f(n) = runtime of the algorithm (how many steps as `n` grows)
+g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n^2
+
+Thus: `f(n)` = O(g(n))
+
+This is because `f(n)` <= c * g(n), where c is a constant, n_o = the point where n is "really really big"
+
+
+**EXAMPLE**
+
+if `f(n) = 3n^2 + 6n - 15,` if we want to prove that the upperbound of the function is `g(n) = n^2`, we have to find the `constant`.
+- The constant should be greater than (or equal to) the ccoefficient of the greatest degree. In this case, `c = 4`. Thus we get:
+
+`g(n) = 4n^2`
+
+3n^2 + 6n -15 <= 4n^2
