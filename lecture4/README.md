@@ -113,6 +113,8 @@ This is because `f(n)` <= c * g(n), where c is a constant, n_o = the point where
 if `f(n) = 3n^2 + 6n - 15,` if we want to prove that the upperbound of the function is `g(n) = n^2`, we have to find the `constant`.
 - The constant should be greater than (or equal to) the ccoefficient of the greatest degree. In this case, `c = 4`. Thus we get:
 
-`g(n) = 4n^2`
+`3n^2 + 6n -15 <= 4n^2`
 
-3n^2 + 6n -15 <= 4n^2
+Given that `n = 5` (randomly seleted), plug 5 into all of `n`, which will give us: `90 <= 100`
+
+Because the above relation is true, 
