@@ -122,6 +122,7 @@ Given that `n = 5` (randomly seleted), plug 5 into all of `n`, which will give u
 
 Because the above relation is true, when graphing the relation on a graph, we are able to prove that c*g(n) is the upperbound of f(n).
 
+</br>
 ---
 ### BIG - Ω Anaylsis:
 
@@ -143,7 +144,8 @@ g(n) = c * n^2
 - The constant should be less than (or equal to) the coefficient of the greatest degree. In this case, `c = 2`. Thus we get:
 
   `3n^2 + 6n -15 >= 2n^2` plugging in `n = 5` (given that n = 5) will give us `90 >= 50`.
-
+  
+</br>
 
 ### Big Theta Notation:
 
@@ -156,7 +158,7 @@ f(n) = θ*g(n) if there exist values for c1, c2, and n_o such that c1 * g(n) <= 
 f(n) = 3n^2 + 6n - 15
 c1 = 3 
 c2 = 9
-n_o = 3
+n = 3
 
 </br>
 
@@ -164,6 +166,10 @@ n_o = 3
 6b = linear growth
 (-)15 = insignificant
 
-*Lower Boudn*
-# Must prove that 3n^2 + 6n - 15 >= 3n^2
+*Lower Bound*
+Must prove that `3n^2 + 6n - 15 >= 3n^2` which when we plug in `n = 3` -> 30 >= 27 #TRUE
 
+*Upper Bound*
+Must prove that `3n^2 + 6n - 15 <= 9n^2` which when we plug in `n = 3` -> 30 >= 81 #TRUE
+
+Thus we have the lower bound and upper bound of `3n^2 <= f(n) <= 9n^2`
