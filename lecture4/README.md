@@ -99,8 +99,11 @@ Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better
 Usually we only care about the upper-bound since it is the worse case scenario.
 
 ---
-
+<div align = "center">
+ 
 ### BIG - O Analysis:
+
+</div>
 
 f(n) = runtime of the algorithm (how many steps as `n` grows)
 g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n^2
@@ -123,9 +126,11 @@ Because the above relation is true, when graphing the relation on a graph, we ar
 
 </br>
 
----
-
+<div align = "center">
+ 
 ### BIG - Ω Anaylsis:
+
+</div>
 
 > Ω -> This is how fast the algorithm is **guaranteed** to grow. ("best-case scenario").
 
@@ -147,9 +152,12 @@ g(n) = c * n^2
   `3n^2 + 6n -15 >= 2n^2` plugging in `n = 5` (given that n = 5) will give us `90 >= 50`.
   
 </br>
+<div align = "center">
 
 ### Big Theta Notation:
 
+</div>
+ 
 f(n) = θ*g(n) if there exist values for c1, c2, and n_o such that c1 * g(n) <= f(n) <= c2 * g(n:
 
 > Remember that c1 must be an integer smaller than or equal to the coefficient of the greatest degree, vice verse for c2
