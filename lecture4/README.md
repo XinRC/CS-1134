@@ -98,7 +98,7 @@ Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better
 Usually, we only care about the *worse-case scenario*, aka the UPPERBOUND. 
 
 
-### Big-O Analysis:
+### BIG - O Analysis:
 
 f(n) = runtime of the algorithm (how many steps as `n` grows)
 g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n^2
@@ -120,6 +120,7 @@ Given that `n = 5` (randomly seleted), plug 5 into all of `n`, which will give u
 Because the above relation is true, when graphing the relation on a graph, we are able to prove that c*g(n) is the upperbound of f(n).
 
 ---
+### BIG - Ω Anaylsis:
 
 > Ω -> This is how fast the algorithm is **guaranteed** to grow. ("best-case scenario").
 
