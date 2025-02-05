@@ -93,6 +93,7 @@ Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better
 ## Asymptotic Analysis:
 
 </div>
+
 > θ -> how the runtime grows as `n` approaches infinity **at an exact rate**
 
 > O -> also represents the upperbound *(worse-case scenario)* as `n` approaches infinity.
@@ -142,3 +143,27 @@ g(n) = c * n^2
 - The constant should be less than (or equal to) the coefficient of the greatest degree. In this case, `c = 2`. Thus we get:
 
   `3n^2 + 6n -15 >= 2n^2` plugging in `n = 5` (given that n = 5) will give us `90 >= 50`.
+
+
+### Big Theta Notation:
+
+f(n) = θ*g(n) if there exist values for c1, c2, and n_o such that c1 * g(n) <= f(n) <= c2 * g(n:
+
+> Remember that c1 must be an integer smaller than or equal to the coefficient of the greatest degree, vice verse for c2
+
+**EXAMPLE**
+
+f(n) = 3n^2 + 6n - 15
+c1 = 3 
+c2 = 9
+n_o = 3
+
+</br>
+
+3n^2 = dominant term
+6b = linear growth
+(-)15 = insignificant
+
+*Lower Boudn*
+# Must prove that 3n^2 + 6n - 15 >= 3n^2
+
