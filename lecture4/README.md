@@ -122,7 +122,9 @@ Given that `n = 5` (randomly seleted), plug 5 into all of `n`, which will give u
 Because the above relation is true, when graphing the relation on a graph, we are able to prove that c*g(n) is the upperbound of f(n).
 
 </br>
+
 ---
+
 ### BIG - Ω Anaylsis:
 
 > Ω -> This is how fast the algorithm is **guaranteed** to grow. ("best-case scenario").
