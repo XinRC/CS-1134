@@ -62,7 +62,7 @@ def square_root_prime(n):
 Overall, all the functions above are ways to **optimze** the program. 
 
 ## Runtime:
-Runtime is very important in Computer Science. To figure out the runtime for the program, a function is used to determine its runtime. 
+Runtime is very important in Computer Science. To figure out the runtime for the program, a function is used to determine its runtime. The jist of Big Theta is that it is usually refered to as the average runtime. Focusing more on it will showcase two other types of notations that will be discussed later, `Big O` and `Big Ω`
 
 ```python
 For T(n), where T(n) stands for runtime. T represents speed while (n) 
