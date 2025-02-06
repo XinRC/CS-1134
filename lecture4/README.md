@@ -102,9 +102,10 @@ Usually we only care about the upper-bound since it is the worse case scenario.
 <div align = "center">
  
 ### BIG - O Analysis:
-> O -> This is how fast the algorithm **might** grow. ("worse-case scenario").
 
 </div>
+
+> O -> This is how fast the algorithm **might** grow. ("worse-case scenario").
 
 f(n) = runtime of the algorithm (how many steps as `n` grows)
 g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n^2
