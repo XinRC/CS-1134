@@ -71,7 +71,7 @@ Thus in asymptotic analysis, usually it will:
 1. Drop the lowest order terms
 2. Ignore leading constants of highest order
 
-For example, for ever `x = 5` or similar code, you can add `+1`. However, for `loops`, you must represent the loop as `n` and multiply it by those inside the loop. For example:
+For example, for every `x = 5` or similar code, you can add `+1`. However, for `loops`, you must represent the loop as `n` and multiply it by those inside the loop. For example:
 
 ```python
 def count(n):
