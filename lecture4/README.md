@@ -102,6 +102,7 @@ Usually we only care about the upper-bound since it is the worse case scenario.
 <div align = "center">
  
 ### BIG - O Analysis:
+> O -> This is how fast the algorithm **might** grow. ("worse-case scenario").
 
 </div>
 
