@@ -4,7 +4,7 @@
 
 </div>
 
->Linear Search: Searches one by one
+-Linear Search: Searches one by one
 
 ```python
 def linear_search(lst, val): #searching through a list ot find a target value
@@ -14,4 +14,4 @@ def linear_search(lst, val): #searching through a list ot find a target value
       return i
   return None
 ```
->
+-
