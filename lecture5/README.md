@@ -1,6 +1,6 @@
 <div align="center">
 
-#Searching Algorithms
+# Searching Algorithms
 
 </div>
 
