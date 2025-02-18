@@ -35,5 +35,8 @@ Instead of resizing the size by 1 everytime, python lists will **double** in siz
 
 ### ***Amortised Analysis***
 The average (or amortised) time per append operation is θ(1) because it runs on constant time much more than the time is runs on `n` time (when doubling). 
-Thus: 
-> T<sub>amortised~</sub>(n) = total cost of the entire series / `n`
+Thus to figure out amortised time: 
+> T<sub>amortised</sub>(n) = total cost of the entire series / `n`
+
+> T<sub>naive</sub>(n) = Θ(`n<sup>2</sup>) / n= θ(`n`)
+> T<sub>optimized</sub>(n) = n / n = θ(`1`)
