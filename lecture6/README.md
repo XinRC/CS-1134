@@ -40,4 +40,4 @@ Thus to figure out amortised time:
 
 > T<sub>naive</sub>(n) => Θ(n<sup>2</sup>) / n => θ(`n`)
 
-> T<sub>optimized</sub>(n) => n / n => θ(`1`)
+> T<sub>optimized</sub>(n) => Θ(n) / n => θ(`1`)
