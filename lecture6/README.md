@@ -38,6 +38,7 @@ The average (or amortised) time per append operation is θ(1) because it runs on
 Thus to figure out amortised time: 
 > T<sub>amortised</sub>(n) = total cost of the entire series / `n`
 
+The following is the amortised time for the naive solution (not allocating extra space) vs. optimized (allocating extra space) where the naive solution runs of Θ(n<sup>2</sup>) and the optimized solution runs on O(n)
 > T<sub>naive</sub>(n) => Θ(n<sup>2</sup>) / n => θ(`n`)
 
 > T<sub>optimized</sub>(n) => Θ(n) / n => θ(`1`)
