@@ -1,6 +1,7 @@
 <div align = "center">
 
-# The Reality of Appending
+# Lecture 7 / 8
+## The Reality of Appending
 
 </div>
 
