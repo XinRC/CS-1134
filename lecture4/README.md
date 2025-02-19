@@ -146,8 +146,8 @@ Thus `f(n) = Ωg(n)`
 - There will also be a constant `c` where `f(n) >= c*g(n)`
 
 **EXAMPLE**
-f(n) = 3n^2 + 6n - 15
-g(n) = c * n^2
+f(n) = 3n<sup>2</sup> + 6n - 15
+g(n) = c * n<sup>2</sup>
 
 - The constant should be less than (or equal to) the coefficient of the greatest degree. In this case, `c = 2`. Thus we get:
 
@@ -160,27 +160,27 @@ g(n) = c * n^2
 
 </div>
  
-f(n) = θ*g(n) if there exist values for c1, c2, and n_o such that c1 * g(n) <= f(n) <= c2 * g(n:
+f(n) = θ*g(n) if there exist values for c<sub>1</sub>, c<sub>2</sub>, and n<sub>o</sub> such that c<sub>1</sub> * g(n) <= f(n) <= c<sub>2</sub> * g(n:
 
 > Remember that c1 must be an integer smaller than or equal to the coefficient of the greatest degree, vice verse for c2
 
 **EXAMPLE**
 
-f(n) = 3n^2 + 6n - 15
-c1 = 3 
-c2 = 9
+f(n) = 3n<sup>2</sup> + 6n - 15
+c<sub>1</sub> = 3 
+c<sub>2</sub> = 9
 n = 3
 
 </br>
 
-3n^2 = dominant term
+3n<sup>2</sup> = dominant term
 6b = linear growth
 (-)15 = insignificant
 
 *Lower Bound*
-Must prove that `3n^2 + 6n - 15 >= 3n^2` which when we plug in `n = 3` -> 30 >= 27 #TRUE
+Must prove that `3n<sup>2</sup> + 6n - 15 >= 3n<sup>2</sup>` which when we plug in `n = 3` -> 30 >= 27 #TRUE
 
 *Upper Bound*
-Must prove that `3n^2 + 6n - 15 <= 9n^2` which when we plug in `n = 3` -> 30 >= 81 #TRUE
+Must prove that `3n<sup>2</sup> + 6n - 15 <= 9n<sup>2</sup>` which when we plug in `n = 3` -> 30 >= 81 #TRUE
 
-Thus we have the lower bound and upper bound of `3n^2 <= f(n) <= 9n^2`
+Thus we have the lower bound and upper bound of `3n<sup>2</sup> <= f(n) <= 9n<sup>2</sup>`
