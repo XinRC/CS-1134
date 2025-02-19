@@ -178,9 +178,9 @@ n = 3
 (-)15 = insignificant
 
 *Lower Bound*
-Must prove that `3n<sup>2</sup> + 6n - 15 >= 3n<sup>2</sup>` which when we plug in `n = 3` -> 30 >= 27 #TRUE
+Must prove that `3n <sup>2</sup> + 6n - 15 >= 3n <sup>2</sup>` which when we plug in `n = 3` -> 30 >= 27 #TRUE
 
 *Upper Bound*
-Must prove that `3n<sup>2</sup> + 6n - 15 <= 9n<sup>2</sup>` which when we plug in `n = 3` -> 30 >= 81 #TRUE
+Must prove that `3n <sup>2</sup> + 6n - 15 <= 9n <sup>2</sup>` which when we plug in `n = 3` -> 30 >= 81 #TRUE
 
-Thus we have the lower bound and upper bound of `3n<sup>2</sup> <= f(n) <= 9n<sup>2</sup>`
+Thus we have the lower bound and upper bound of `3n <sup>2</sup> <= f(n) <= 9n <sup>2</sup>`
