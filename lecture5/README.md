@@ -1,6 +1,7 @@
 <div align="center">
 
-# Searching Algorithms
+# Lecture 5
+## Searching Algorithms
 
 </div>
 
