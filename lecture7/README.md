@@ -1,6 +1,6 @@
 <div align = "center">
   
-# Lecture 6 
+# Lecture 7
 
 
 </div>
