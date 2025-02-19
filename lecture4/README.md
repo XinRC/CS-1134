@@ -85,7 +85,7 @@ So the previous code will run at 2n + 2 because there are two items in the for l
 
 </br>
 
-Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is. Another way to determine how optimized the algorithm is by look at its function. For example, T(1) is more optimized than T(n^2) since n^2 is a quadriatic. 
+Thus, `T(n) ≅ n`. When using very big numbers, the smaller T(n) is, the better optimized the algorithm is. Another way to determine how optimized the algorithm is by look at its function. For example, T(1) is more optimized than T(n<sup>2</sup>) since n<sup>2</sup> is a quadriatic. 
 
 ---
 <div align = "center">
@@ -108,7 +108,7 @@ Usually we only care about the upper-bound since it is the worse case scenario.
 > O -> This is how fast the algorithm **might** grow. ("worse-case scenario").
 
 f(n) = runtime of the algorithm (how many steps as `n` grows)
-g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n^2
+g(n) = some function to compare how fast `f(n)` grows. For example: log(n), n<sup>2</sup>
 
 Thus: `f(n)` = O(g(n))
 
@@ -178,9 +178,9 @@ n = 3
 (-)15 = insignificant
 
 *Lower Bound*
-Must prove that `3n <sup>2</sup> + 6n - 15 >= 3n <sup>2</sup>` which when we plug in `n = 3` -> 30 >= 27 #TRUE
+Must prove that `3n^2 + 6n - 15 >= 3n^2` which when we plug in `n = 3` -> 30 >= 27 #TRUE
 
 *Upper Bound*
-Must prove that `3n <sup>2</sup> + 6n - 15 <= 9n <sup>2</sup>` which when we plug in `n = 3` -> 30 >= 81 #TRUE
+Must prove that `3n^2 + 6n - 15 <= 9n^2` which when we plug in `n = 3` -> 30 >= 81 #TRUE
 
-Thus we have the lower bound and upper bound of `3n <sup>2</sup> <= f(n) <= 9n <sup>2</sup>`
+Thus we have the lower bound and upper bound of `3n^2 <= f(n) <= 9n^2`
