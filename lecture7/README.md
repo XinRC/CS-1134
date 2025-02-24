@@ -5,10 +5,9 @@
 ## Recursion
 
 </div>
-
-Recursion is utilizes stack as a means to solve the issue. Recursion has two elements to is:
+Resursion is a problem-solving technique closed related to mathematicl induction, breaking a problem into smaller instances (of the same problem) where if the smallest case is true, the broader aspects is also true. Recursion utilizes stack as a means to solve the issue. It has two elements to it:
 - `Base Case`
-  - Identify the amount of time the recursion will run
+  - Condition with the *smallest* smallest possible input 
 - `Recursion Step`
   - Calls the recursion function to get the smallest instances.
  
