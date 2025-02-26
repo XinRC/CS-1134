@@ -72,4 +72,4 @@ def count_occurance(lst, val):
       count_occurance(rest_elem, val)
 ```
 
-Thus the total *local* cost is `n` because of `rest_elem = lst\[1:]
+Thus the total *local* cost is `n` because of `rest_elem = lst\[1:]`
