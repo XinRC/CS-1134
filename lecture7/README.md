@@ -80,20 +80,25 @@ This is a strategy that will cause the code to be more efficient. For this case,
 ```python
 def count_occurance(lst, val):
     def helper(lst, low, high, val):
-        
+
+        #BASE CASE
         if low == high:
             if lst[low] == val:
                 return 1
             else:
                 return 0
+
+        #RECURSION CASE
         else:
             if lst[low] == val:
                 return 1 + helper(lst, low + 1, high, val)
             else:
                 return helper(lst, low + 1, high, val)
-        
+
+    #BASE CASE
     if len(lst) == 0:
         return (0)
+    #RECURSION CASE
     else:
         return helper(lst, 0, len(lst) - 1, val)
 ```
