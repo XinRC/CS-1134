@@ -47,7 +47,7 @@ This is because originally, we assume that `count_up(1,5)` will eventually give 
 2. If function call A makes a call to B, we must draw an "edge" aka just a line, (the branch of the tree) from A to B.
 3. Finally for each node, write the "cost" of each function as if the recursion call does not exist. (This is called the local cost).
 
-> If everything in the function is constant, then θ(n) because you are calling the function `n` amount of times.
+> If everything in the function is constant, then θ(n) because you are calling the function `n` amount of times. This means that that for recursion, it must be *at least* θ(n)
 
 The link of a diagram will be later posted:
 
