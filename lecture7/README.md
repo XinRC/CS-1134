@@ -72,5 +72,5 @@ def count_occurance(lst, val):
       count_occurance(rest_elem, val)
 ```
 
-Thus the total **local** cost is `n` because of `rest_elem = lst[1:]`. This means the final the total runtime is θ(n <super> 2 </super> )
+Thus the total **local** cost is `n` because of `rest_elem = lst[1:]`. This means the final the total runtime is θ(n <sup> 2 </sup>)
  
