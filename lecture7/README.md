@@ -73,4 +73,28 @@ def count_occurance(lst, val):
 ```
 
 Thus the total **local** cost is `n` because of `rest_elem = lst[1:]`. This means the final the total runtime is θ(n<sup>2</sup>)
+
+
+## Two Pointer Solution
+This is a strategy that will cause the code to be more efficient. 
+```python
+def count_occurance(lst, val):
+    def helper(lst, low, high, val):
+        
+        if low == high:
+            if lst[low] == val:
+                return 1
+            else:
+                return 0
+        else:
+            if lst[low] == val:
+                return 1 + helper(lst, low + 1, high, val)
+            else:
+                return helper(lst, low + 1, high, val)
+        
+    if len(lst) == 0:
+        return (0)
+    else:
+        return helper(lst, 0, len(lst) - 1, val)
+```
  
