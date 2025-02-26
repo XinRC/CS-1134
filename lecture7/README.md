@@ -76,7 +76,7 @@ Thus the total **local** cost is `n` because of `rest_elem = lst[1:]`. This mean
 
 
 ## Two Pointer Solution
-This is a strategy that will cause the code to be more efficient. 
+This is a strategy that will cause the code to be more efficient. For this case, we must use a helper function that will provide us a low and high pointer.
 ```python
 def count_occurance(lst, val):
     def helper(lst, low, high, val):
