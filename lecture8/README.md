@@ -19,7 +19,11 @@ Do make note that the function is not recreating a new list but **mutating** the
 
 </br> 
 
+<div align = "center">
+  
 ### Selection Sort
+
+</div>
 This sort repeatedly selects the smallest element of the list and **swaps** it with the closest **unsorted** element of the list. 
 
 For example:
