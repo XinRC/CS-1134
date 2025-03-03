@@ -35,9 +35,13 @@ lst = \[5, 8, 12, 7, 8, 10]
 As the program traverse, it will look like the follow:
 
 \[5, 8, 12, 7, 8, 10] The original list
+
 \[5, 7, 12, 8, 8, 10]
+
 \[5, 7, 8, 12, 8, 10]
+
 \[5, 7, 8, 8, 12, 10]
+
 \[5, 7, 8, 8, 10, 12]
 
 ```python
