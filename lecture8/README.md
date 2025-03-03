@@ -15,6 +15,7 @@ some_sorting_function(lst)
 print(lst)
 # prints [1,2,3]
 ```
-Do know that the function is not recreating a new list but **mutating** a new list. 
+Do make note that the function is not recreating a new list but **mutating** the original list. 
 
+</br> 
 ### Selection Sort
