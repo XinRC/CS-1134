@@ -18,4 +18,41 @@ print(lst)
 Do make note that the function is not recreating a new list but **mutating** the original list. 
 
 </br> 
+
 ### Selection Sort
+This sort repeatedly selects the smallest element of the list and **swaps** it with the closest **unsorted** element of the list. 
+
+For example:
+lst = \[5, 8, 12, 7, 8, 10]
+
+- One pointer (f) will traverse the entirety of the list
+- Another pointer (s) will stay at the index of the first unsorted element.
+
+As the program traverse, it will look like the follow:
+
+\[5, 8, 12, 7, 8, 10] The original list
+\[5, 7, 12, 8, 8, 10]
+\[5, 7, 8, 12, 8, 10]
+\[5, 7, 8, 8, 12, 10]
+\[5, 7, 8, 8, 10, 12]
+
+```python
+def swap(lst, curr, min_idx):
+  temp = lst[curr]
+  lst[curr] = lst[min_idx]
+  lst[min_idx] = temp
+  # the whole thing is θ(1)
+
+def selection_sort(lst):
+  n = len(lst)
+
+  for curr in range(n):
+    min_idx = curr
+
+    for j in range(curr + 1):
+      if lst[j] < lst[min_idx]:
+        min_idx = j
+    swap(lst, curr, min_idx)
+```
+Overall selection sort is not very efficient. 
+
