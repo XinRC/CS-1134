@@ -72,3 +72,5 @@ Overall selection sort is not very efficient.
 
 </div>
 
+This sorting method has two methods at index `0` and `1`, if the item at index `1` is smaller than the item at `0`, then a swap would occur. Then we will move to the next index, index `1` and `2` where the cycle will continuously cycle through the list swapping when necessary. 
+<img src="https://miro.medium.com/v2/resize:fit:1000/0*nh6F_qERbgD3xmV-.gif"/>
