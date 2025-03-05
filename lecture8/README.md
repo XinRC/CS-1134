@@ -64,3 +64,11 @@ def selection_sort(lst):
 ```
 Overall selection sort is not very efficient. 
 
+</br>
+
+<div align = "center">
+  
+### Bubble Sort
+
+</div>
+
