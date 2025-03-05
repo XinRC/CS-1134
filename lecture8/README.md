@@ -21,7 +21,7 @@ Do make note that the function is not recreating a new list but **mutating** the
 
 <div align = "center">
   
-### Selection Sort
+## Selection Sort
 
 </div>
 This sort repeatedly selects the smallest element of the list and **swaps** it with the closest **unsorted** element of the list. 
@@ -60,7 +60,7 @@ Overall selection sort is not very efficient, running at θ(n<sup>2</sup>).
 
 <div align = "center">
   
-### Bubble Sort
+## Bubble Sort
 
 </div>
 
@@ -72,3 +72,25 @@ This sorting method has two methods at index `0` and `1`, if the item at index `
   <img src="https://miro.medium.com/v2/resize:fit:1000/0*nh6F_qERbgD3xmV-.gif" width = "500" height = "300"/>
 </div>
 
+```python
+def bubble_sort(lst):
+  n = len(lst)
+
+  for i in range(n - 1): #  n - 1 is to avoid going out of the bounds
+    for j in range(n - i - 1): #  n - i is to avoid the sorted portion and the -1 is to go out of the bounds
+      if lst[j] > lst[j + 1]:
+        lst[j], lst[j + 1] = lst[j + 1], lst[j] #  swaps the elements
+
+```
+<div align = "center">
+
+## Insertion Sort
+
+</div>
+We first assume that the item in index `0` has already been sorted (it does not have to be true). We then compare the next index, at index `1` which if the item at index `1` is greater than the item at index `0`, we do not do anything. However, if the item at index `0` is greater than the item at index `1`, then we swap. Then we move our pointers to the next item at index `1` and `2`, if the item at index `2` is smaller than the item at index `1`, we will swap them. Then we will compare the item formerly at index `2` and compare it to the item on the current index `0`. If the item formerly at index `2` is smaller than the item currently at index `0`, then we will swap. This will continue until the whole list has been sorted. 
+
+</br>
+<div align = "center">
+<img src= "https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif"/>
+</div>
+</br>
