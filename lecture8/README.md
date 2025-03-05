@@ -87,6 +87,7 @@ def bubble_sort(lst):
 ## Insertion Sort
 
 </div>
+
 We first assume that the item in index `0` has already been sorted (it does not have to be true). We then compare the next index, at index `1` which if the item at index `1` is greater than the item at index `0`, we do not do anything. However, if the item at index `0` is greater than the item at index `1`, then we swap. Then we move our pointers to the next item at index `1` and `2`, if the item at index `2` is smaller than the item at index `1`, we will swap them. Then we will compare the item formerly at index `2` and compare it to the item on the current index `0`. If the item formerly at index `2` is smaller than the item currently at index `0`, then we will swap. This will continue until the whole list has been sorted. 
 
 </br>
