@@ -29,12 +29,6 @@ This sort repeatedly selects the smallest element of the list and **swaps** it w
 - One pointer (f) will traverse the entirety of the list
 - Another pointer (s) will stay at the index of the first unsorted element.
 
-<div align = "center">
-
-<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif" width = "500" height = "300"/>
-  
-</div>
-
 ```python
 def swap(lst, curr, min_idx):
   temp = lst[curr]
@@ -53,6 +47,14 @@ def selection_sort(lst):
         min_idx = j
     swap(lst, curr, min_idx)
 ```
+</br>
+
+<div align = "center">
+
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif" width = "500" height = "300"/>
+  
+</div>
+
 Overall selection sort is not very efficient, running at θ(n<sup>2</sup>). 
 
 </br>
