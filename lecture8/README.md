@@ -66,7 +66,7 @@ Overall selection sort is not very efficient, running at θ(n<sup>2</sup>).
 
 <div align = "center">
 
-<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif" width = "200" height = "200"/>
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif" width = "500" height = "400"/>
   
 </div>
 
