@@ -66,7 +66,7 @@ Overall selection sort is not very efficient, running at θ(n<sup>2</sup>).
 
 <div align = "center">
 
-<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif" width = "500" height = "400"/>
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif" width = "500" height = "300"/>
   
 </div>
 
@@ -83,6 +83,6 @@ This sorting method has two methods at index `0` and `1`, if the item at index `
 </br>
 
 <div align = "center">
-  <img src="https://miro.medium.com/v2/resize:fit:1000/0*nh6F_qERbgD3xmV-.gif"/>
+  <img src="https://miro.medium.com/v2/resize:fit:1000/0*nh6F_qERbgD3xmV-.gif" width = "500" height = "300"/>
 </div>
 
