@@ -55,9 +55,8 @@ def selection_sort(lst):
   
 </div>
 
-Overall selection sort is not very efficient, running at θ(n<sup>2</sup>). 
-
 </br>
+Overall selection sort is not very efficient, running at θ(n<sup>2</sup>). 
 
 <div align = "center">
   
