@@ -92,6 +92,6 @@ We first assume that the item in index `0` has already been sorted (it does not 
 
 </br>
 <div align = "center">
-<img src= "https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif"/>
+<img src= "https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" width = "500" height = "300"/>
 </div>
 </br>
