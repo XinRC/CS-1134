@@ -62,7 +62,13 @@ def selection_sort(lst):
         min_idx = j
     swap(lst, curr, min_idx)
 ```
-Overall selection sort is not very efficient. 
+Overall selection sort is not very efficient, running at θ(n<sup>2</sup>). 
+
+<div align = "center">
+
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*5WXRN62ddiM_Gcf4GDdCZg.gif"/>
+  
+</div>
 
 </br>
 
