@@ -95,3 +95,17 @@ We first assume that the item in index `0` has already been sorted (it does not 
 <img src= "https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" width = "500" height = "300"/>
 </div>
 </br>
+
+```python
+def insertion_sort(lst):
+  for idx in range(1, len(lst)):
+    curr = lst[idx]
+    j = idx
+
+    while j >= 1 and lst[j - 1] > curr:
+      lst[j] = lst[j-1]
+      j -= 1
+
+    lst[j] = curr
+      
+```
