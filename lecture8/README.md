@@ -116,8 +116,45 @@ def insertion_sort(lst):
  
 </div>
 
-This sorting algorithm utilizes recursion. Given a list, we will keep dividing the list into 2 until it reaches its base case (of 1 item). Then once it is in its base case, we will "merge" it to make it follow sequential order. Then it will do the same for the other base cases, eventually merging them with the previous merged list. 
+This sorting algorithm utilizes recursion. Given a list, we will keep dividing the list into 2 until it reaches its base case (of 1 item). Then once it is in its base case, we will "merge" it to make it follow sequential order. Then it will do the same for the other base cases, eventually merging them with the previous merged list. The overall running time of merge sort is nlog(n)
 
 <div align = "center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" width = "500" height = "250">
 </div>
+
+```python
+
+def merge(srt_lst1, srt_lst2):
+  merged_lst = []
+  idx_1 = 0
+  idx_2 = 0
+
+  while idx_1 < len(srt_lst1) and idx_2 < len(srt_lst2):
+    if srt_lst1[idx_1] < srt_lst2[idx_2]:
+      merged_lst.append(srt_lst1[idx_1])
+      idx_1 += 1
+    else:
+      merged_lst.append(srt_lst2[idx_2])
+      idx_2 += 1
+
+  return merged_lst
+
+
+def merge_sort(lst):
+  if len(lst) == 0:
+    return
+  elif len(lst) == 1:
+    return
+  else:
+    mid = len(lst) // 2
+    left_lst = lst[:mid]
+    right_lst = lst[mid:]
+
+    merge_sort(left_lst)
+    merge_sort(right_lst)
+
+    merged = merge(left_lst, right_lst)
+
+    for i in range(len(merged)):
+      lst[i] = merged[i]
+```
