@@ -109,3 +109,13 @@ def insertion_sort(lst):
     lst[j] = curr
       
 ```
+
+<div align = "center">
+
+ ## Merge Sort
+ 
+</div>
+
+This sorting algorithm utilizes recursion. Given a list, we will keep dividing the list into 2 until it reaches its base case (of 1 item). Then once it is in its base case, we will "merge" it to make it follow sequential order. Then it will do the same for the other base cases, eventually merging them with the previous merged list. 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" width = "500" height = "300">
