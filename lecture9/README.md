@@ -23,7 +23,6 @@ Imagine the interface of the program as being `public` but the implementation as
 5. stack.pop() |*removes te item from top of the stack - **also returns the item** > Θ(1)*
 6. stack.top() |*returns the topmost item > Θ(1)*
 
-
 ```python
 s = Stack()
 s.push(2)
@@ -33,3 +32,4 @@ print(len(s)) # prints 1 because the items in the stack
 ```
 
 Because there is no Stack object in python, we must create our own object. 
+
