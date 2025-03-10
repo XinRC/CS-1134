@@ -16,12 +16,12 @@ Imagine the interface of the program as being `public` but the implementation as
 ## Stack
 **LIFO** - The last item in is the first item out. To think of this, imagine a stack of plates. We must remove the top ones because if we were to remove the bottom one, the whole entire thing would topple to the ground. 
 
-1. stack = Stack() *creates empty stack*
-2. len(stack) *number of items in the stack*
-3. stack.is_empty() *true if len(stack) == 0, else false*
-4. stack.push(item) *adds item onto the top of the stack*
-5. stack.pop() *removes te item from top of the stack - **also returns the item***
-6. stack.top() *returns the topmost item*
+1. stack = Stack() |*creates empty stack > Θ(1)*
+2. len(stack) |*number of items in the stack > Θ(1)*
+3. stack.is_empty() |*true if len(stack) == 0, else false > Θ(1)*
+4. stack.push(item) |*adds item onto the top of the stack > Θ(1)*
+5. stack.pop() |*removes te item from top of the stack - **also returns the item** > Θ(1)*
+6. stack.top() |*returns the topmost item > Θ(1)*
 
 
 ```python
