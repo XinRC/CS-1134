@@ -33,3 +33,49 @@ print(len(s)) # prints 1 because the items in the stack
 
 Because there is no Stack object in python, we must create our own object. 
 
+
+### Implementation for Static Array 
+In general call stacks are usually static because there is not unlimited RAM.
+```python
+# assuming ctypes and the previous class (ArrayList) have been imported
+
+# for static-size stack:
+class StaticArrayStack:
+  def __init__(self, max_capacity):
+    self.data = make_array(max_capacity)
+    self.capacity = max_capacity
+    self.n = 0 # this is the current size 
+
+  def is_empty(self):
+    return len(self) == 0
+
+  def is_full(self):
+    return len(self) == self.max_capacity
+
+  def __len__(self):
+    return self.n
+
+  def push(self,item):
+    if self.isfull():
+      raise Exception("Stack is full")
+    
+    self.data[self.n] = item
+    self.n += 1
+
+  def pop(self):
+    if self.is_empty():
+      raise Exception("Stack is empty")
+
+    item = self.data[self.n - 1] # assigns the "topmost" item as at the variable "item"  
+    self.data[self.n - 1] = None # "topmost" item disappears because it becomes "None"
+    self.n -= 1
+
+    return item
+
+  def top(self):
+    if self.is_empty():
+      raise Exception("Stack is empty")
+
+    item = self.data[self.n - 1]
+    return item
+```
