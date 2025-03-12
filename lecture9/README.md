@@ -157,3 +157,35 @@ This function runs at linear time and the time complexity is also linear.
 
 Given a list: \[ 2 3 4 + 3 * - ]
 We must scan the whole thing until we find out first operator, `+`. Then we must add the two numbers that prefaces it, `3` and `4`. This wll give us: \[ 2 7 3 * - ] where we scan the list until we find the first operator, `*` and muliplify the two numbers that prefaces it, `7` and `3`. This will give us \[ 2 21 - ] which will give us \[ - 19 ]
+
+When stacking, a similiar thing happens. Whenever we reach an operand, the last two items on the stack gets popped and there would be a `push` for the result of the operand and operator. Each item are usually called "token"
+
+```python
+
+def eval_postfix_expr(string):
+  lst = string.split() #θ(n)
+  stack = ArrayStack() θ(1)
+
+  for token in lst:
+    if token not in "+-*/":
+      stack.push(int(token))
+    else:
+      op_one = stack.pop()
+      op_two = stack.pop()
+
+      if token == "+":
+        res = op_one + op_two
+      elif token == "-":
+        res = op_one - op_two
+      elif token == "*":
+        res = op_one * op_two
+      else:
+          if op_one == 0:
+            raise ZeroDivisionError
+          else:
+            res = op_one / op_two
+
+      stack.push(int(res))
+
+  return stack.pop()
+```
