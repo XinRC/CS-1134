@@ -33,6 +33,7 @@ print(len(s)) # prints 1 because the items in the stack
 
 Because there is no Stack object in python, we must create our own object. 
 
+</br>
 
 ### Implementation for Static Array 
 In general call stacks are usually static because there is not unlimited RAM.
@@ -78,4 +79,41 @@ class StaticArrayStack:
 
     item = self.data[self.n - 1]
     return item
+```
+
+</br>
+
+### Implementation for Dynamic Array 
+
+```python
+# assuming ctypes and the previous class (ArrayList) have been imported.
+# many of the following functions like `append` have been previously defined in the class ArrayList(). This is why we are not redefining them.
+
+# for dynamic-size stack:
+class ArrayStack:
+
+  def __init__(self):
+    self.data = ArrayList()
+
+  def __len__(self);
+    return len(self.data)
+
+  def is_empty(self):
+    return len(self) == 0
+
+  def push(self, val):
+    self.data.append(val)
+
+  def top(self):
+    if self.is_empty():
+      raise Exception("The Stack is empty")
+
+    return self.data[-1] # the ArrayList class has a function that allows us to index
+
+  def pop(self):
+    if self.is_empty():
+      raise Exception("The Stack is empty")
+
+    return self.data.pop() # the ArrayList class has a function that does popping
+
 ```
