@@ -87,7 +87,8 @@ class StaticArrayStack:
 
 ```python
 # assuming ctypes and the previous class (ArrayList) have been imported.
-# many of the following functions like `append` have been previously defined in the class ArrayList(). This is why we are not redefining them.
+# many of the following functions like `append` have been previously defined in the class ArrayList().
+# this is why we are not redefining them.
 
 # for dynamic-size stack:
 class ArrayStack:
