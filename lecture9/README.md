@@ -118,3 +118,42 @@ class ArrayStack:
     return self.data.pop() # the ArrayList class has a function that does popping
 
 ```
+
+<div align = "center"> 
+  
+## Problem Solving with Stacks
+
+</div>
+
+The most "comical" problem stacks can solve is reversing a list/string. Given a string, the item at index `0` would be the the bottom-most item in the stack, followed by the item at index `1`, then `2`, then `3`, continuing until we reach the `len(s) - 1`. In the end, this means the topmost item on the stack would be the item on the last index. This means when reversing the items, the item on the last index would become the first item. The time complexity is: θ(n).
+
+```python
+string = "Plato"
+
+def reverse(string):
+  stack = ArrayStack() # dynamic array stack from previous example | this is also θ(1)
+
+  for char in string: # adds every character, overall runtime of the loop is θ(n)
+    stack.push(char) # amortized time of .push() is θ(1)
+
+  while not stack.is_empty():
+    char = stack.pop() # amoritzed time of .pop() is θ(1)
+    print(char, end = "") # θ(1)
+
+  print() # θ(1)
+```
+This function runs at linear time and the time complexity is also linear.
+
+
+<div align = "center"> 
+  
+# Polish Notation
+
+</div>  
+
+2 + 2 -> infix notation
+2 2 + -> postfix notation
+\+ 2 2 -> prefix notation
+
+Given a list: \[ 2 3 4 + 3 * - ]
+We must scan the whole thing until we find out first operator, `+`. Then we must add the two numbers that prefaces it, `3` and `4`. This wll give us: \[ 2 7 3 * - ] where we scan the list until we find the first operator, `*` and muliplify the two numbers that prefaces it, `7` and `3`. This will give us \[ 2 21 - ] which will give us \[ - 19 ]
