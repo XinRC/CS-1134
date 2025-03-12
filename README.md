@@ -18,4 +18,4 @@ The repository includes notes from **CS-UY 1134** lectures.
 
 ### Data Structures
 
-- [Lecture 9](https://github.com/XinRC/CS-1134/blob/main/lecture9/README.md) |: Abstract Data Types
+- [Lecture 9](https://github.com/XinRC/CS-1134/blob/main/lecture9/README.md) |: Abstract Data Types / Stacks / Polish Notation
