@@ -20,7 +20,7 @@ Queues is another type of abstract data types. It is similar to its real world a
 > Traditional Model where "everybody moves forward when dequeuing" - θ(n) because of the shifting
 
 > Ciruclar Model where if the front item/s are dequeued, then the following enqueued item's data will be placed in the front indexes.
-> Thus index <sub>front + 1</sub> = (index<sub>front</sub> + 1) % capacity 
+> Thus index <sub> front + 1 </sub> = (index<sub> front </sub> + 1) % capacity 
 
 ```python
 index
