@@ -1,6 +1,7 @@
 <div align = "center">
-  
-# Abstract Data Types
+
+# Lecture 9  
+## Abstract Data Types
   
 </div>
 
