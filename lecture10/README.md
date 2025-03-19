@@ -85,3 +85,85 @@ class StaticArrayQueue():
     return self.data_arr[front_ind]
 
 ```
+
+```python
+# dynamic queue implementation
+
+from ctypes import py_object
+
+def make_array(n):
+  return (n * py_object)()
+
+
+class DynamicArrayQueue():
+  #static constant: this is an attribute that belongs to the class, OBJECT the object
+  INITIAL_CAPACITY = 8
+
+  def __init__(self):
+    self.data = make_array(DynamicArrayQueue.INITIAL_CAPACITY)
+    self.capacity = DynamicArrayQueue.INITIAL_CAPACITY
+    self.n = 0
+    self.front_ind = None
+
+  def __len__(self):
+    return self.n
+
+  def is_empty(self):
+    return len(self.n) == 0
+
+  def resize(self, new_cap):
+    new_data = make_array(new_cap)
+    old_ind = self.front_ind  #front of the queue before resizing
+
+    for new_ind in range(self.n):
+      new_data[new_ind] = self.data[old_ind] #moves the elements to the front
+      old_ind = (old_ind + 1) % self.capacity #moves "cursor" 1 back
+
+    self.data = new_data
+    self.capacity = new_cap
+    self.front_ind = 0
+
+  def enqueue(self, item):
+    if self.n == self.capacity: #if the queue is at the FULL capacity
+      self.resize(2 * self.capacity)
+      back_ind = (self.front_ind + self.n) % self.capacity
+      self.data_arr[back_ind] = item
+      self.n += 1
+
+    elif self.isempty():
+      self.data_arr[0] = elem
+      self.front_ind = 0
+      self.n += 1
+
+    else:
+      back_ind = (self.front_ind + self.n) % self.capacity
+      self.data_arr[back_ind] = item
+      self.n += 1
+
+  def dequeue(self): #reshuffling proper order
+    if self.isempty():
+      raise Exception("Queue is empty")
+
+    value = self.data[self.front_ind] #the item to be dequeued
+
+    self.data[self.front_ind] = None
+    self.front_ind + (self.front_ind + 1) % self.capacity
+    self.n -= 1
+
+    if self.isempty():
+      self.front_ind = None
+
+    if self.n < self.capacity // 4 and self.capacity > DynamicArrayQueue.INITIAL_CAPACITY:
+      self.resize(self.capacity // 2)
+
+  def first(self):
+    if self.is_empty():
+      raise Exception("Queue is empty")
+
+    self.data[self.front_ind] 
+    
+    
+
+if __name__ == "__main__":
+  print(DynamicArrayQueue.INITIAL_CAPACITY)
+```
