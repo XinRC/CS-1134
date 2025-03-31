@@ -73,3 +73,66 @@ if __name__ = "__main__":
   main()
     
 ```
+<div align = "center">
+  
+## Doubly Linked List
+### Bi-Directional Linked List
+  
+<img src="https://techvidvan.com/tutorials/wp-content/uploads/2021/06/Doubly-linked-list-in-DS-1.jpg" width = 400 height = 250>
+
+</div>
+
+</br>
+
+```python
+#starts with a head list and en end list, always "insert" after the head list but before the end list.. 
+class DoublyLinkedList:
+  class Node:
+    def __init__(self, data = None):
+      self.data = None
+      self.next = None
+      self.prev = None
+
+  def __init__(self):
+    self.header = DoublyLinkedList.Node()
+    self.trailer = DoublyLinkedList.Node()
+    self.n = 0 #size
+
+    #connecting header and trailer together
+    self.header.next = self.trailer
+    self.trailer.prev = self.header
+
+  def __len__(self):
+    return self.n
+
+  def is_empty(self):
+    if len(self) == 0:
+      return True
+    else:
+      return False
+
+  def add_after(self, node, val): #"new_node" is after node.
+    new_node = DoublyLinkedList.Node(val)
+
+    #keep track of connections
+    prev_node = node
+    next_node = node.next
+
+    prev_node.next = new_node
+    new_node.prev = prev_nod
+
+    new_node.next = next_node
+    next_node.prev = new_node
+
+    self.n += 1
+
+    return new_node #returns a  pointer to the new node
+
+  def add_first(self,val):
+    return self.add_after(self.header, val)
+
+  
+
+def main():
+  
+```
