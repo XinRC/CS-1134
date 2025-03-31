@@ -29,19 +29,20 @@ A node knows it is the trailer of a node and that is it a head of another node.
 </div>
 
 ```
-
 class Node:
   def __init__(self, data = None):
     self.data = data
     self.next = None
 
-if __name__ = "__main__":
-# 1 -> 2 -> 3
 
-  head = Node()
+def main():
+  #creating the linked list
+  head = Node() #first instance of a Node
   head.data = 1
   print(head.data) #prints 1
 
+
+  #adding elements to the linked list (one directional list)
   new = Node(2)
   head.next = new_node
   print(head.next.data) #prints 2
@@ -49,10 +50,26 @@ if __name__ = "__main__":
   new_node = Node(3)
   head.next.next = new_node
   print(head.next.next.data) #prints 3
+  # [ 1 -> 2 -> 3]
 
+
+  #changing the head of a linked list
+  new_head = Node(0)
+  new_head.next = head #points new node's next pointer to the current header
+  head = new_head #points header's pointer to the new head
+  # [ 0 -> 1 -> 2 -> 3]
+
+  #traverse our linked list
   current = head
+  print("[", end = "")
 
-  while current != None
-    print(f"{current.data} -> ", end = " ")
+  while current != None:
+    print(f"{current.data} ->", end = "")
+    current = current.next
+
+  print("]")
+
+if __name__ = "__main__":
+  main()
     
 ```
