@@ -28,7 +28,7 @@ A node knows it is the trailer of a node and that is it a head of another node.
   
 </div>
 
-```
+```python
 class Node:
   def __init__(self, data = None):
     self.data = data
