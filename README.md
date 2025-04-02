@@ -21,3 +21,4 @@ The repository includes notes from **CS-UY 1134** lectures.
 - [Lecture 9](https://github.com/XinRC/CS-1134/blob/main/lecture9/README.md) |: Abstract Data Types / Stacks / Polish Notation
 - [Lecture 10](https://github.com/XinRC/CS-1134/tree/main/lecture10) |: Queues
 - [Lecture 11](https://github.com/XinRC/CS-1134/tree/main/lecture11#readme) |: Linked Lists
+- [Lecture 12](https://github.com/XinRC/CS-1134/blob/main/lecture12/README.md) |: Trees
