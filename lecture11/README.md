@@ -111,6 +111,7 @@ class DoublyLinkedList:
     else:
       return False
 
+  #ADDING
   def add_after(self, node, val): #"new_node" is after node.
     new_node = DoublyLinkedList.Node(val)
 
@@ -123,7 +124,6 @@ class DoublyLinkedList:
 
     new_node.next = next_node
     next_node.prev = new_node
-
     self.n += 1
 
     return new_node #returns a  pointer to the new node
@@ -131,8 +131,77 @@ class DoublyLinkedList:
   def add_first(self,val):
     return self.add_after(self.header, val)
 
-  
+  def add_last(self, node, val):
+    return self.add_after(self.trailer.prev, val)
 
-def main():
+  def add_before(self,node, val):
+    return self.add_after(node.prev, val)
+
+  #DELETION
+  def disconnect(self):
+    self.data = None
+    self.next = None
+    self.prev = None
+
+  def delete_node(self, node):
+    data = node.data
+
+    #save references to the surronding nodes 
+    previous = node.prev
+    after_node = node.next
+
+    #connect surronding nodes to each other
+    previous.next = after_node
+    after_node.prev = previous
+
+    #update the size
+    size.n -= 1
+
+    #disconnect node we are deleting
+    node.disconnect()
+
+  def delete_first(self):
+    if self.is_empty():
+      raise Exception("List is empty")
+    return self.delete_node(self.header.next)
+
+  def delete_last(self):
+    if self.is_empty():
+      raise Exception("List is empty")
+    return self.delete_node(self.trailer.prev)
+
+  def remove_all(self,elem):
+    cursor = self.header.next
+
+    while cursor is not self.trailer: #while the item after the header node is not yet the trailing node
+      if cursor.data == elem:
+        next_node = cursor.next
+        self.delete_node(cursor)
+        cursor = next_node
+      else:
+        cursor = cursor.next
+
+  def __iter__(self): #the iterator to allow usage on a "for loop"
+    cursor = self.header.next
+
+    while cursor is not self.trailer:
+      yield cursor.data
+      cursor = cursor.next
+
+  def __repr__(self): #defeats the purpose of the linked list because it turns it into an array
+    return '[' + ' <--> '.join([str(elem) for elem in self]) + ']'
+
+  def __str__(self):
+    return repr(self)
   
+  
+def main():
+  dll = DoublyLinkedList
+  dll.add_last(1)
+  dll.add_last(2)
+  dll.add_last(3)
+  dll.add_after(dll.header.next, 10)
+  print(dll)
+  # [1 <--> 10 <--> 2 <--> 3]
+
 ```
