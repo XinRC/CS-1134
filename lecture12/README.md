@@ -6,7 +6,8 @@
 </div>
 
 ## Terms and Definitions
-
+<div align = "center"> 
+  
 | Terms | Definition |
 | :---: | :--- |
 | **Parent** | The node above another node. Also called "root-node" |
@@ -22,6 +23,8 @@
 | **Descendent** | Where in `(u,v)`, `v` has the ancestor of `u` if there is a path from `u` to `v` |
 | **Level** | Whenever there is a "break" or "edge", a "level" will be formed. Levels increase as we get deeper into the tree. | 
 | **Height of the Tree** | The length of the longest path in the tree | 
+
+</div>
 
 ## Types of Binary Trees
 > **Full Binary Tree**: Each tree node can only have 0 or 2 children.
