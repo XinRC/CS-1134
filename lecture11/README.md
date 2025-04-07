@@ -5,19 +5,18 @@
 
 </div>
 
-**Pros of an array list:**
-- Access any element in constant time through indexing
-- Good amortized performance overall
+## Definition:
+Linked lists are similar to a regular list except values are *linked* together sequentially. With a regular array list, the values would not its position relative to others. For example, it would not know if it is the first or last value. However, for a linked list, they *somewhat* know their position relative to another (depending on whether the linked list is one way or doubly). 
 
-**Cons of an array list:**
-- With a very large dataset, storing data would be problematic
-- Insertions (and deletions) are expensive, usually being ϴ(n)
+***
 
-However, linked lists combat the expensive nature of insertions and deletions. 
+## Benefits / Drawbacks of Linked Lists
+| Pros | Cons |
+| :---: | :--- |
+| Access any elements through indexing (θ(1)) | With a large dataset, storing data would be problematic |
+| Good amortized performance overall | Insertions/Deletions take (θ(n)) | 
 
-## Linked Lists
-> Values that are *linked* together sequentially to form a list. For a regular array list, the values would have **zero** idea they are placed near each other. Do note that linked lists are **one way**
-
+***
 
 ## Anatomy of a Node:
 A node knows it is the trailer of a node and that is it a head of another node. 
