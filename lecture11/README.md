@@ -11,10 +11,14 @@ Linked lists are similar to a regular list except values are *linked* together s
 </br>
 
 ## Benefits / Drawbacks of Linked Lists
+<div align = "center">
+  
 | Pros | Cons |
 | :--- | :--- |
 | Access any elements through indexing (θ(1)) | With a large dataset, storing data would be problematic |
 | Good amortized performance overall | Insertions/Deletions takes (θ(n)) | 
+  
+</div>
 
 </br>
 
