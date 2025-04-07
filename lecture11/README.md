@@ -8,24 +8,30 @@
 ## Definition:
 Linked lists are similar to a regular list except values are *linked* together sequentially. With a regular array list, the values would not its position relative to others. For example, it would not know if it is the first or last value. However, for a linked list, they *somewhat* know their position relative to another (depending on whether the linked list is one way or doubly). 
 
-***
+</br>
 
 ## Benefits / Drawbacks of Linked Lists
 | Pros | Cons |
-| :---: | :--- |
+| :--- | :--- |
 | Access any elements through indexing (θ(1)) | With a large dataset, storing data would be problematic |
-| Good amortized performance overall | Insertions/Deletions take (θ(n)) | 
+| Good amortized performance overall | Insertions/Deletions takes (θ(n)) | 
+
+</br>
 
 ***
 
 ## Anatomy of a Node:
-A node knows it is the trailer of a node and that is it a head of another node. 
+Every node holds data and have a pointer pointing at the next node. For doubly=-linked lists, nodes also have pointers pointing at the node that comes before it. Every node knows that is it the trailer of a node and the header of another node (even if it points at `None`). 
 
 <div align = "center">
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220712172013/Singlelinkedlist.png" width = "600"/>
   
 </div>
+
+***
+
+## Node Implementation
 
 ```python
 class Node:
@@ -75,13 +81,23 @@ if __name__ = "__main__":
 <div align = "center">
   
 ## Doubly Linked List
-### Bi-Directional Linked List
+**(Bi-Directional Linked List)**
+
+<div align = "left"> 
   
-<img src="https://techvidvan.com/tutorials/wp-content/uploads/2021/06/Doubly-linked-list-in-DS-1.jpg" width = 400 height = 250>
+Again, doubly linked lists is like the average linked-list, except they also have a pointer pointing at the previous node. This means you can gather data both ways compared to a regular linked list in which you are only able to point at the node with data coming after the given node. 
 
 </div>
 
 </br>
+
+<img src="https://techvidvan.com/tutorials/wp-content/uploads/2021/06/Doubly-linked-list-in-DS-1.jpg" width = 400 height = 250>
+
+</div>
+
+</br> 
+
+## Doubly Linked List Implementation
 
 ```python
 #starts with a head list and en end list, always "insert" after the head list but before the end list.. 
