@@ -5,6 +5,8 @@
   
 </div>
 
+## Terms and Definitions
+
 | Terms | Definition |
 | :---: | :--- |
 | **Parent** | The node above another node. Also called "root-node" |
@@ -21,36 +23,32 @@
 | **Level** | Whenever there is a "break" or "edge", a "level" will be formed. Levels increase as we get deeper into the tree. | 
 | **Height of the Tree** | The length of the longest path in the tree | 
 
-<div align = "center">
+## Types of Binary Trees
+> **Full Binary Tree**: Each tree node can only have 0 or 2 children.
 
-<img src = "https://www.w3schools.com/dsa/img_exercises_trees.png" width = 350 height = 300>
-  
-</div>
-
-*** 
-
-- *Full Binary Tree*: Each tree node can *only* have 0 or 2 children.
-- *Complete Binary Tree*: Each parent *must* have 2 children - forcing every level to have the max possible amount of nodes. 
+> **Complete Binary Tree**: Each parent *must* have 2 children for each level. This means every level must have the max possible amount of nodes. 
 
 
 <div align = "center">
 
-<img src = "https://ik.imagekit.io/upgrad1/abroad-images/imageCompo/images/unnamed_11_IWS24B.png?pr-true" width = 300 height = 200>
+<img src = "https://ik.imagekit.io/upgrad1/abroad-images/imageCompo/images/unnamed_11_IWS24B.png?pr-true" width = 400 height = 250>
+
+(For each level of the tree, each parent must have 2 children until we arrive at the level of the leaf nodes)
 
 </div>
 
-*** 
-
-If the amount of work done by a tree is constant, then technically it would be of θ(n) because of the amount of times `(n)` it traverses the tree. 
+</br>
+</br>
 
 <div align = "center">
   
 ## To Traverse a List
+To traverse a list, it will cost a minimum of θ(n) due to us going through the list `n` amount of times. 
 
 </div>
 
 ## Preorder
-This method looks at the center, left, then right recursively. 
+This method looks at the center, left, then right recursively. This means we will get the value of the "center" value first then continuously get the value of the left value (because if it splits up, the left value would be considered a "center") until we reach the leftmost value. Then we will take the right value, and if it is the "center", then it will take the left value until it reaches the leftmost value, then taking the right value. 
 
 <div align = "center">
 
@@ -77,7 +75,7 @@ This method is how we would read in english, from left, center, then right. If t
 </div>
 
 ## Breadth-First Order
-This is the most common method - it is also not recursive. For this method, we must see each nodes with its specific levels. We will traverse from level 0 to level `n`. We get the values of each level from left to right (usually but it is not required to go from left to right). 
+This is the most common method - it is also not the only one in the list that is not recursive. For this method, we must recognize the levels each nodes reside on. We will traverse from level 0 to level `n`. We will then get the values of each level from left to right (usually it goes from left to right, it is not required though). 
 
 
 <div align = "center">
