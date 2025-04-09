@@ -1,14 +1,13 @@
 <div align = "center">
 
 # Lecture 3
+## Iterators / Iterable
 
 </div> 
 
-## Iterators / Iterable
-
 >Iterable: An item that is able to become an iterator. This includes lists and strings.
 
->Iterators: The item will be iterated through. 
+>Iterators: This item allows lists/strings/arrays to be traversed through. 
 
 The `iter()` function will convert the data type into an iterator, allowing for the call of the `next()` function. The `next()` function will iterate through the items of the iterator.
 
