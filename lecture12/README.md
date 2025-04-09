@@ -90,6 +90,8 @@ This is the most common method - it is also not the only one in the list that is
 ## Tree Implementation
 
 ```python
+from ArrayQueue import ArrayQueue
+
 class Node:
   def __init__(self, data, left = None, right = None): # left/right represents the children
     self.data = data
@@ -160,6 +162,142 @@ class LinkedBinaryTree:
         right_sum = subtree_sum(root.right) # gathers the right sums 
 
       return root.data + left_sum + right_sum # adds the root data with the data from the left/right sums
-
     return subtree_sum(self.root)
+
+    def __iter__(self):
+      for node in self.breadth_first():
+        yield node.data
+
+    def __len__(self):
+      return self.size
+
+  def is_empty(self):
+    return if len(self) == 0
+
+
+  #PREORDER
+  def preorder(self):
+  ''' must require inner function | preorder is center -> left -> right '''
+    def subtree_preorder(root):
+    if root == None:
+      pass
+    else:
+      #current/root/center
+      yield root
+  
+      #left
+      yield from subtree(root.left)
+  
+      #right
+      yield from subtree(root.right)
+    yield from subtree_preorder(self.root)
+
+
+  # POSTORDER
+  def postorder(self):
+    ''' postorder is left -> right -> center(root/current) '''
+    def subtree_postorder(root):
+      if root == None:
+        pass
+      else:
+
+        #left
+        yield subtree_postorder(root.left)
+
+        #right
+        yield subtree_postorder(root.right)
+
+        #current/root/center
+        yield root
+    yield from subtree_postorder(self.root)
+
+
+  # INORDER
+  def inorder(self):
+    '''inorder is left -> center -> right'''
+    def subtree_inorder(root);
+      if root == None:
+        pass
+      else:
+
+        #left
+        yield subtree_inorder(root.left)
+
+        #current/root/center
+        yield root
+
+        #right
+        yield subtree_inorder(root.right)
+  yield subtree_inorder(self.root)
+
+
+  def breadth_first(self):
+    if self.is_empty():
+      return
+
+    #must utilize a queue (to enqueue/dequeue) while not empty
+    bfs_queue = ArrayQueue()
+    bfs_queue.enqueue(self.root)
+
+    while not bfs_queue.is_empty():
+      curr_node = bsf_queue.dequeue()
+
+      yield curr_node
+
+      if curr_node.left is not None:
+        bfs_queue.enqueue(curr_node.left)
+      if curr_node.right is not None:
+        bfs_queue.enqueue(curr_node.right)
+      ''' this code dequeues the parent, and if the parent has children, then it will enqueue the children in their spot '''
+
+    # height of the tree
+    def height(self):
+      # compares the height of the left / right
+      def subtree_height(root):
+        if root.left is None and root.right is None:
+          return 0 # because the root is at level 0
+        elif root.right is None:
+          left_height = subtree_height(root.left)
+          return left_height + 1
+        elif root.left is None:
+          right_height = subtree_height(root.right)
+          return right_height + 1
+        else:
+          ''' for this case, we must compare left_height and right_height and use the MAX ''' 
+          left_height = subtree_height(root.left)
+          right_height = subtree_height(root.right)
+
+          return max(left_height, right_height) + 1
+
+    if self.isempty():
+      raise Exception("Tree is empty")
+
+    return subtree_height(self.root)
+```
+
+## \[EXTRA] Generating from other generators
+This technique was used in the previous code. This is an explaination on how it works
+
+```python
+def gen_yield():
+  yield 1
+  yield 2
+  yield 3
+
+def gen_2():
+  yield 0
+
+  # how would we yield the numbers from the function gen_yield()? The following would technically work but it looks bulky
+  '''
+  for value in gen_vield():
+    yield value
+  '''
+
+  # a one-line solution for the above situation
+  yield from gen_one()
+
+  yield 4
+  yield 5
+
+# 1 2 3 4 5 (space represents a new line)
 ```
