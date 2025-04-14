@@ -272,7 +272,66 @@ class LinkedBinaryTree:
     if self.isempty():
       raise Exception("Tree is empty")
 
+
+
     return subtree_height(self.root)
+
+'''
+Build and evaluate an expression that looks like (3 + 4) * 5 -> (in prefix)
+Root (*): Indicate multiplication betwene two subtrees where we must build an expression that ooks like (3 + 4) * 5
+Left: (Rooted at +): Indicate an addition between two subtrees
+Right: (Rooted at 5): Indicate the value 5 (bc it doesn't have children and is not an operator)
+'''
+
+tree = LinkedBinaryTree()
+
+# Create operand nodes and assigning them their value
+n3 = LinkedBinaryTree.Node(3)
+n4 = LinkedBinaryTree.Node(4)
+n5 = LinkedBinaryTree.Node(5)
+
+# for the operator we must have a left and right node because we are combining n3 and n4
+plus = LinkedBinaryTree.Node(data = "+", left = n3, right = n4) 
+times = LinkedBinaryTree.Node(data = "*", left = plus, right = n5)
+
+# assign the root
+tree = LinkedBinaryTree(root = times)
+
+def eval_exp_tree(expression_tree: LinkedBinaryTree): #should return a float
+  def subtree_eval(root: LinkedBinaryTree.Node):
+    # Base Case -> if this node is a leaf, return its data
+    if root.left == None and root.right == None:
+      return root.data
+
+    # Recursive Case -> evaluate the children first
+    left_value = subtree_eval(root = root.left)
+    right_value = subtree_eval(root = root.right)
+
+    # Apply operator at current node
+
+    if root.data == "+":
+      return left_value + rightvalue
+    elif root.data == "-":
+      return left_value - right_value
+    elif root.data == "*":
+      return left_value * right_value
+    elif root.data == "/":
+      if right_value == 0:
+        raise ZeroDivisionError
+      else:
+        return left_value / right_value
+    else:
+      raise ValueError(f"Unknown operator {root.data}") #When it is not an operator
+
+  if tree.root is None:
+    raise Exception("Cannot evaluate an empty tree")
+
+  return subtree_eval(tree.root)
+
+#Evaluating
+result = eval_exp_tree(tree
+print(tree)
+    
 ```
 
 ## \[EXTRA] Generating from other generators
