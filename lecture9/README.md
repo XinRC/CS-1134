@@ -6,7 +6,7 @@
 </div>
 
 
-> Abstraction: Seperates the interface of our program from the implementation.
+> **Abstraction**: Seperates the interface of our program from the implementation.
 
 There are several types of abstraction: 
 1. Procedural: steps treated as units
@@ -14,15 +14,30 @@ There are several types of abstraction:
 
 Imagine the interface of the program as being `public` but the implementation as `private`. 
 
-## Stack
-**LIFO** - The last item in is the first item out. To think of this, imagine a stack of plates. We must remove the top ones because if we were to remove the bottom one, the whole entire thing would topple to the ground. 
+<div align = "center">
 
-1. stack = Stack() |*creates empty stack > Θ(1)*
-2. len(stack) |*number of items in the stack > Θ(1)*
-3. stack.is_empty() |*true if len(stack) == 0, else false > Θ(1)*
-4. stack.push(item) |*adds item onto the top of the stack > Θ(1)*
-5. stack.pop() |*removes te item from top of the stack - **also returns the item** > Θ(1)*
-6. stack.top() |*returns the topmost item > Θ(1)*
+## Stack
+
+<div align = "left">
+
+> **LIFO**: The last item in is the first item out. To think of this, imagine a stack of plates. We must remove the top ones because if we were to remove the bottom one, the whole entire thing would topple to the ground. 
+  
+</div>
+
+ </br>
+
+| **Operation** | **Definition** | **Runtime** | 
+| --- | :--- | :---: | 
+| stack = Stack() | creates an empty stack | Θ(1) | 
+| len(stack) | number of items in the stack | Θ(1) | 
+| stack.is_empty() | **true** if len(stack) is 0 | Θ(1) | 
+| stack.push(*item*) | pushes *item* on to the top of the stack | Θ(1) |
+| stack.pop | removes and returns the topmost item on the stack | Θ(1) |
+| stack.top() | returns the topmost item on the stack | Θ(1) | 
+
+</div>
+
+The program should function to what it looks like below. Assume that `Stack()` was defined and has a general general stack implemtnation. 
 
 ```python
 s = Stack()
@@ -31,15 +46,22 @@ s.push(4)
 print(s.pop()) # prints 4 because it removes and returns the last item
 print(len(s)) # prints 1 because the items in the stack
 ```
+</br>
 
-Because there is no Stack object in python, we must create our own object. 
+<div align = "center">
+  
+<img src = "https://miro.medium.com/v2/resize:fit:1400/0*jQp8Ec60Kpfb15JI.gif" width = 200 height = 200>
+
+(How the `push` and `pop` methods work using a stack)
+
+</div>
 
 </br>
 
-### Implementation for Static Array 
-In general call stacks are usually static because there is not unlimited RAM.
+## Implementation for Static Array 
+In general call stacks are usually static because there is no unlimited RAM.
 ```python
-# assuming ctypes and the previous class (ArrayList) have been imported
+# assuming ctypes and the ArrayList class have been imported
 
 # for static-size stack:
 class StaticArrayStack:
@@ -84,7 +106,7 @@ class StaticArrayStack:
 
 </br>
 
-### Implementation for Dynamic Array 
+## Implementation for Dynamic Array 
 
 ```python
 # assuming ctypes and the previous class (ArrayList) have been imported.
@@ -104,19 +126,19 @@ class ArrayStack:
     return len(self) == 0
 
   def push(self, val):
-    self.data.append(val)
+    self.data.append(val) # using an ArrayList() class method because the ArrayList is where we store our data
 
   def top(self):
     if self.is_empty():
       raise Exception("The Stack is empty")
 
-    return self.data[-1] # the ArrayList class has a function that allows us to index
+    return self.data[-1] # the ArrayList() class has a method that allows us to index (since it works similar to a list)
 
   def pop(self):
     if self.is_empty():
       raise Exception("The Stack is empty")
 
-    return self.data.pop() # the ArrayList class has a function that does popping
+    return self.data.pop() # the ArrayList() class has a method that does popping
 
 ```
 
@@ -132,40 +154,55 @@ The most "comical" problem stacks can solve is reversing a list/string. Given a 
 string = "Plato"
 
 def reverse(string):
-  stack = ArrayStack() # dynamic array stack from previous example | this is also θ(1)
+  stack = ArrayStack() # the dynamic array stack implemented from the previous example
 
-  for char in string: # adds every character, overall runtime of the loop is θ(n)
-    stack.push(char) # amortized time of .push() is θ(1)
+  for char in string: # adds every character, into the stack
+    stack.push(char) 
 
   while not stack.is_empty():
-    char = stack.pop() # amoritzed time of .pop() is θ(1)
-    print(char, end = "") # θ(1)
+    char = stack.pop() 
+    print(char, end = "") 
 
-  print() # θ(1)
+
+"""
+Result:
+
+otalP
+"""
 ```
 This function runs at linear time and the time complexity is also linear.
 
+</br>
 
 <div align = "center"> 
   
 # Polish Notation
 
-</div>  
+</br>
 
-2 + 2 -> infix notation
-2 2 + -> postfix notation
-\+ 2 2 -> prefix notation
+| **Notation** | **Example*** | **Telling Them Apart** | 
+| :---: | :---: | :--- |
+| Infix | 2 + 2 | Normal math notation |
+| Postfix | 2 2 + | Operand usually in the end |
+| Prefix | + 2 2 | At least one operand in the beginning usually |
 
-Given a list: \[ 2 3 4 + 3 * - ]
-We must scan the whole thing until we find out first operator, `+`. Then we must add the two numbers that prefaces it, `3` and `4`. This wll give us: \[ 2 7 3 * - ] where we scan the list until we find the first operator, `*` and muliplify the two numbers that prefaces it, `7` and `3`. This will give us \[ 2 21 - ] which will give us \[ - 19 ]
+</div>
 
-When stacking, a similiar thing happens. Whenever we reach an operand, the last two items on the stack gets popped and there would be a `push` for the result of the operand and operator. Each item are usually called "token"
+> **Only** postfix works very well with stacks. 
+
+</br>
+
+### Explaination for Postfix:
+
+Given a list: `[ 2 3 4 + 3 * - ]`, We must scan the whole list until we find our first operator, `+`. Then we must add the two numbers that prefaces it, `3` and `4`. This will give us: `[ 2 7 3 * - ]` then we traverse the list until we find the next operator, `*` and muliplify the two numbers that prefaces it, `7` and `3`. This will give us `[ 2 21 - ]`. Again we find the next operator `-` and subtract the two numbers that preface it, `2` and `21` which will give us `[ - 19 ]`.
+
+We can utilize stacks because it follows the same strategy as the postfix method. 
 
 ```python
 
 def eval_postfix_expr(string):
-  lst = string.split() #θ(n)
-  stack = ArrayStack() θ(1)
+  lst = string.split() # seperating string into a list so we can evaluate each value by itself. Costs θ(n)
+  stack = ArrayStack() 
 
   for token in lst:
     if token not in "+-*/":
