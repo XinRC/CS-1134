@@ -227,3 +227,10 @@ def eval_postfix_expr(string):
 
   return stack.pop()
 ```
+
+</br>
+<div align = "center">
+  
+[More Resources](https://github.com/sebastianromerocruz/CS1134-data-structures-and-algorithms/tree/main/lectures/08-stacks)
+
+</div>
