@@ -5,22 +5,30 @@
   
 </div>
 
-Queues is another type of abstract data types. It is similar to its real world application where the first person in is the first person out (FIFO - *first in first out*). The "in" represents "enqueue" and the "out" represents "dequeue". 
+Queues is another form of abstract data types. It follows the FIFO (first in, first out) strategy. 
 
-### Operations we want for queues:
-- q = Queue() # creation of a queue - θ(1)
-- len(q) # determines the length of queue - θ(1)
-- q.isempty() # checks if the queue is empty - θ(1)
-- q.enqueue(item) # adds item at the end of the queue - θ(1) amortized 
-- q.dequeue(item) # removes and returns item at the front of a queue - θ(1) amortized
-- q.first() # returns the first item of the queue - θ(1)
+<div align = "center">
 
+| Operation | Definition | Runtme | 
+| :--- | :--- | :---: |
+| queue = Queue() | creates an empty queue | θ(1) | 
+| len(q) | number of items in the queue | θ(1) |
+| q.is_empty() | **true** if len(q) is 0 | θ(1) | 
+| q.enqueue(item) | adds the item to the end of the queue | θ(1) (amortized) | 
+| q.dequeue(item) | removes and returns the item at the front of the queue | θ(1) amortized | 
+| q.first() | returns the first item of the queue | θ(1) |
+
+</br>
+
+</div>
 
 ### Two Models of Queues:
-> Traditional Model where "everybody moves forward when dequeuing" - θ(n) because of the shifting
+> **Traditional Model** where "everybody moves forward when dequeuing." This costs θ(n) because of the shifting required. 
 
-> Ciruclar Model where if the front item/s are dequeued, then the following enqueued item's data will be placed in the front indexes.
-> Thus index <sub> front + 1 </sub> = (index<sub> front </sub> + 1) % capacity. This is where the index of the "first" changes. 
+> **Ciruclar Model** where if the front item/s have been dequeued (holding no data) and the back of the queue is full, then the later enqueued item will be placed in the front indexes that are empty.
+> The index of the "first" change would be at:
+>
+> <sub> front + 1 </sub> = (index<sub> front </sub> + 1) % capacity
 
 </br>
 
@@ -31,7 +39,7 @@ Queues is another type of abstract data types. It is similar to its real world a
 </div>
 
 ```python
-# static queue implementation
+# STATIC QUEUE IMPLEMENTATION
 from ctypes import py_object
 
 def make_array(n):
@@ -39,10 +47,10 @@ def make_array(n):
 
 class StaticArrayQueue():
   def __init__(self, max_cap):
-    self.data_arr = make_array(max_cap)
+    self.data_arr = make_array(max_cap) # this is where the data will actually be stored
     self.capacity = max_cap
-    self.n = 0 #current size
-    self.front_ind = None
+    self.n = 0 # current size
+    self.front_ind = None # initializing front index at NONE because the queue is empty 
 
   def __len__(self):
     return self.n
