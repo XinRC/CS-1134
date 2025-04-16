@@ -51,21 +51,9 @@ In this case, the height would be 3, because there are 3 levels: [0 -> 1 -> 2 ->
 </div>
 
 | Operation Name | Definition | Runtime | 
-| :--- | :--- | :--- |
-| Lookup | Must have a `current` that traverse the BST and starts at the root-root. Depending on if the target value is less than or greater than the current node, we will either recurse to the left or right. This will eventually give us the target value, or it means the target value does not exist. This is pretty much "binary search" | **Best case:** Ω(1) if `root.data == target_value` </br></br> **Average Case:** θ(h) for skewed cases or θ(log(n)) for balanced trees. </br></br> **Worse Case:** O(h) for skewed trees. 
-| Insertion | There are 3 types: [Rebalancing, Skewed, and "Simply inserting" (being the easiest to implement, also the one we will discuss). </br></br>  Given our current node (`n`), and the new node (`v`), if the tree is empty, `v` would become the root. Otherwise, if `v` < `n`, we will recurse into the left child (until there is no left child to which `v` becomes the left child. If `v` > `n`, we will recurse into the right child (until there is no right child to which `v` becomes the right child). | **Best case:** Ω(1) when BST is empty or Ω(log(n)) </br></br> **Average Case:** θ(log(n)) for balanced trees, but generally θ(h) </br></br> **Worse Case:** O(h) for skewed trees. |
-| Duplications | If `v == node.data`, then we must ignore. BSTs dont allow duplicates. | θ(1) |
-| Deletion | There are 3 types: [] | | 
-
-
-
-**Deletion**
-- balancing
-- skewed
-- still rebalancing but less heavy. (may keep the left side complete but modify the right side) (root be switched to the smallest value on the right side)
-
-  1. search for the node we want to delete
-  2. no child: disconnect target, 1 child promoted to the target node, 2 child where we will look for the inorder successor (smallest in the left subtree) 
-  3. replace target's value with successors then recursively delete
+| :---: | :--- | :--- |
+| Lookup | Must have a `current` that traverse the BST and starts at the root-root. Depending on if the target value is less than or greater than the current node, we will either recurse to the left or right. This will eventually give us the target value, or it means the target value does not exist. This is pretty much "binary search" | **Best case:**</br> Ω(1) if `root.data == target_value` </br></br> **Average Case:**</br> θ(h) for skewed cases or θ(log(n)) for balanced trees. </br></br> **Worse Case:**</br> O(h) for skewed trees. 
+| Insertion | There are 3 types: \[Rebalancing, Skewed, and "Simply inserting" (being the easiest to implement, also the one we will discuss)] </br></br>  Given our current node (`n`), and the new node (`v`), if the tree is empty, `v` would become the root. Otherwise, if `v` < `n`, we will recurse into the left child (until there is no left child to which `v` becomes the left child. If `v` > `n`, we will recurse into the right child (until there is no right child to which `v` becomes the right child). | **Best case:**</br> Ω(1) when BST is empty or Ω(log(n)) </br></br> **Average Case:**</br> θ(log(n)) for balanced trees, but generally θ(h) </br></br> **Worse Case:**</br> O(h) for skewed trees. |
+| Duplication | If `v == node.data`, then we must ignore. BSTs dont allow duplicates. | θ(1) |
+| Deletion | There are 3 types: \[Rebalanced (Heavy), Skewed, Rebalanced (Less Heavy: One side may stay the same while the other side may be rebalanced)] </br></br> We must first search for the node we want to delete, which would fall into 3 categories: \[**0 children** where we will simply disconnect the target , **1 child** where we promote the child to the target node's old position, **2 children** where we will look for the inorder successor (smallest value in the left subtree) and promote that node to the target node's old position. Then we must recursively replace and delete. | **Best/Average Case**</br> Ω/θ(log(n)) </br></br> **Worst Case**</br> O(h)| 
  
-  generally Ω/θ = logn, O(h)
