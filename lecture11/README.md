@@ -10,7 +10,7 @@ Linked lists are similar to a regular list except values are *linked* together s
 
 </br>
 
-## Benefits / Drawbacks of Linked Lists
+## Benefits / Drawbacks of ArrayLists
 <div align = "center">
   
 | Pros | Cons |
