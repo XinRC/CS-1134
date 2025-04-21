@@ -6,7 +6,7 @@
 </div>
 
 ## Definition:
-Linked lists are similar to a regular list except values are *linked* together sequentially. With a regular array list, the values would not its position relative to others. For example, it would not know if it is the first or last value. However, for a linked list, they *somewhat* know their position relative to another (depending on whether the linked list is one way or doubly). 
+Linked lists are similar to a regular list except values are *linked* together sequentially. With a regular array list, the values would not know its position relative to others. For example, it would not know if it is the first or last value. However, for a linked list, they *somewhat* know their position relative to another (depending on whether the linked list is one way or doubly). 
 
 </br>
 
