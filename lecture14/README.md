@@ -57,3 +57,12 @@ In this case, the height would be 3, because there are 3 levels: [0 -> 1 -> 2 ->
 | Duplication | If `v == node.data`, then we must ignore. BSTs dont allow duplicates. | θ(1) |
 | Deletion | There are 3 types: \[Rebalanced (Heavy), Skewed, Rebalanced (Less Heavy: One side may stay the same while the other side may be rebalanced)] </br></br> We must first search for the node we want to delete, which would fall into 3 categories: \[**0 children** where we will simply disconnect the target , **1 child** where we promote the child to the target node's old position, **2 children** where we will look for the inorder successor (smallest value in the left subtree) and promote that node to the target node's old position. Then we must recursively replace and delete. | **Best/Average Case**</br> Ω/θ(log(n)) </br></br> **Worst Case**</br> O(h)| 
  
+
+<div align = "center">
+
+## AVL Tree Map
+Makes 3 functionalities (find, insert, and delete) all run on θ(log(n)) time.
+  
+</div>
+
+**Height Balance Property** For every node `n` in `T`, the heights of the children of `n` differ by at most 1.  
