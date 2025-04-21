@@ -25,7 +25,7 @@ Linked lists are similar to a regular list except values are *linked* together s
 ***
 
 ## Anatomy of a Node:
-Every node holds data and have a pointer pointing at the next node. For doubly=-linked lists, nodes also have pointers pointing at the node that comes before it. Every node knows that is it the trailer of a node and the header of another node (even if it points at `None`). 
+Every node holds data and have a pointer pointing at the next node. For doubly linked lists, nodes also have pointers pointing at the node that comes before it. Every node knows that is it the trailer of a node and the header of another node (even if it points at `None`). 
 
 <div align = "center">
 
