@@ -5,7 +5,7 @@
   
 </div>
 
-In python, they are also known as dictionaries. They are a collection of key-value pairs who follow the following rules:
+In python, a type of "map" data type that we are used before are **dictioniaries** They are a collection of key-value pairs who follow the following rules:
 
 - Each key must be unique 
 - Each key maps to exactly one value
