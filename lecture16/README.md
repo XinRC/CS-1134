@@ -7,8 +7,8 @@
 
 Formally defined as **PQ** or **Heaps** is a form of ADT in which each element has a value *and* a priority. The item with the highest priority is returned first. PQs and Heaps are most often used for task scheduling algorithms. 
 
-Insertions are done freely
-Removals occur at the min values or at values with the max priority. 
+- Insertions are done freely
+- Removals occur at the min values or at values with the max priority. 
 
 </br>
 
@@ -27,8 +27,8 @@ Although not technically a binary tree - we will be thinking about the binary he
 <div align = "center">
   
 | **Defintition** | **Showcase** | 
-| :--- | :--- |  
+| :---: | :--- |  
 | Insertion | **1.** Place new element in next avaliable spot (in the end). </br> **2.** "Bubble up" (upheap) until the heap order property is restored. This is by finding the parent using `(i - 1) // 2`. If the parent's value is greater than the new element's value, then we will swap their indexes. | 
-| Removal | **1.** Swap the root with the last element. </br> **2.** Remove the last element (which was a former head/root). </br> **3.** "Bubble down" (downheap) if necessary. 
+| Removal | **1.** Swap the root (first element) with the last element. </br> **2.** Remove the last element (which was a former head/root). </br> **3.** "Bubble down" (downheap) if necessary. Thos means if the child's value is greater than the head, we must swap their indexes. If it "index" is outside of the array, then it works and we are good. 
 
 </div>
