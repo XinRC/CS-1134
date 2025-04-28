@@ -5,6 +5,9 @@
   
 </div>
 
+> [!WARNING]
+> Needs to be revised
+
 - `Bucket Array`:
   - Giant list of spots/"bucket" locations
   - Each key is mapped to a single bucket using a deterministic rule, deterministic means "predictable"
