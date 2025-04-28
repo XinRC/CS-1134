@@ -96,3 +96,121 @@ h<sub>2</sub>(k) = ((a * k + b) % p) % N
   - **Load Factor**
     - Load Factor α = n / N where `n` represents the number of keys and `N` is the capacity
 - 
+
+
+## Callable Objects:
+```python
+class Counter:
+  def __init__(self):
+    self.count = 0
+  def increment(self:
+    self.count += 1
+  def __call__(self):
+    self.increment += 1
+
+'''
+#Using the increment would be:
+counter = Counter()
+counter.increment()
+counter.increment()
+
+#Using the call dunder method:
+counter = Counter()
+counter()
+counter()
+'''
+```
+
+Method:
+```python
+HASH_PRIME = 40206835204840513073
+
+from random import randrange
+from ctypes import py_object
+from UnsortedArrayMap import UnsortedArrayMap
+
+def make_array(n):
+  return (n * pyobject)()
+
+class ChainingHashTableMap:
+  class MADHashFunction:
+    def __init(self, N, p=Hash_PRIME): # N is the size and p is the prime number
+      self.N = N
+      self.p = p
+      self.a = randrange(1, self.p - 1)
+      self.b = randrange(0, self.p - 1)
+
+    def __call__(self, key):
+      # [(a * hashed_key + b) mod p] mod N 
+      return ((self.a * hash(key) + self.b) % self.p) % self.N
+
+  def __init__(self, N=64):
+    self.table = make_array(N)
+
+    for i in range(N): #for every "part" of the table, we will be adding another data structure to handle collisions
+      self.table[i] = UnsortedArrayMap()
+
+    self.n = 0
+    self.h = ChainingHashTableMap.MADHashFunction(N)
+
+
+  def is_empty(self):
+    return len(self) == 0
+
+  # RETRIEVAL / LOOKUP
+  def __getitem__(self, key): # "double indexing" process
+    i = self.h(key) #which bucket are we in
+    curr_bucket = self.table[i]
+
+    val = curr_bucket[key]
+    return val
+
+  # CREATE NEW KEY-VALUE PAIR
+  def __setitem__(self, key, value):
+    i = self.h(key) # first find the bucket -> must also find the size
+    curr_bucket = self.table[i]
+
+    old_size = len(curr_bucket)
+
+    curr_bucket[key] = value
+
+    new_size = len(curr_bucket)
+
+    if new_size > old_size:
+      self.n += 1
+
+    if self.n > len(self.table): # resizing
+      self.rehash(2 * len(self.table))
+
+  # DELETION:
+  def __delitem__(self, key)
+    i = self.h(key)
+    curr_bucket = self.table[i]
+
+    del curr_bucket[key]
+
+    self.n -= 1
+
+    if self.n > len(self.table) // 4:
+      self.rehash(len(self.table) // 2)
+
+    def __contains__ (self, key):
+      try:
+        self[key]
+        return True
+      except KeyError:
+        return False
+
+    def __iter__(self): # useless -> gets rid of the point of hash tables
+      for curr_bucket in self.table:
+        for key in curr_bucket:
+          yield key 
+
+    def rehash(self, n):
+      old = [(key, self[key]) for key in self]
+
+      self.__init__(new_size)
+
+      for key, val in old:
+        self.[key] = val
+```
