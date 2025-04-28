@@ -25,3 +25,4 @@ The repository includes notes from **CS-UY 1134** lectures.
 - [Lecture 13](https://github.com/XinRC/CS-1134/blob/main/lecture13/README.md) |: Maps
 - [Lecture 14](https://github.com/XinRC/CS-1134/blob/main/lecture14/README.md) |: Binary Search Trees (BST)
 - [Lecture 15](https://github.com/XinRC/CS-1134/blob/main/lecture15/README.md) |: Hash Tables
+- [Lecture 16)(https://github.com/XinRC/CS-1134/blob/main/lecture16/README.md) |:
