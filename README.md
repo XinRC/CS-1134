@@ -27,5 +27,5 @@ The repository includes notes from **CS-UY 1134** lectures.
 - [Lecture 15](https://github.com/XinRC/CS-1134/blob/main/lecture15/README.md) |: Hash Tables
 - [Lecture 16](https://github.com/XinRC/CS-1134/blob/main/lecture16/README.md) |: Priority Queues
 
-[!Warning]
-This repository is in the progress of refinement. 
+> [!Warning]
+> This repository is in the progress of refinement. 
