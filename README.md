@@ -8,7 +8,7 @@
 The repository includes notes from **CS-UY 1134** lectures. 
 
 ### Algorithms 
-- **Lecture 1 and 2** are reviews on copying and other known data structures. 
+- <u>Lecture 1 and 2</u> Copying and Basic Data Structure Review
 - [Lecture 3](https://github.com/XinRC/CS-1134/tree/main/lecture3) |: Iterators / Generators
 - [Lecture 4](https://github.com/XinRC/CS-1134/blob/main/lecture4/README.md) |: Asymptotic Analysis / O-Notations
 - [Lecture 5](https://github.com/XinRC/CS-1134/blob/main/lecture5/README.md) |: Searching Algorithms
@@ -29,3 +29,6 @@ The repository includes notes from **CS-UY 1134** lectures.
 
 > [!Warning]
 > This repository is in the process of refinement. 
+
+
+<sub> **CS-UY 1134 is a course based on the **python** language. Readers are expected to already know the python syntax.** </sub>
